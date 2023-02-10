@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.phone {
+  margin: 30px auto;
+  padding: 18px;
+  width: 350px;
+  height: 90vh;
+
+  background-image: url(./img/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 50px;
+  border: 18px solid #272a2c;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top .middle {
+  background-color: #272a2c;
+  border-radius: 30px;
+  height: 35px;
+  width: 105px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.camera {
+  margin-right: 8px;
+  width: 15px;
+  height: 15px;
+  background-color: #383f44;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera div {
+  width: 10px;
+  height: 10px;
+  background-color: #485157;
+  border-radius: 50%;
+}
+
+.top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.top .right img {
+  height: 18px;
+}
+
+.container {
+  margin-top: 30px;
+  height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widgets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.widget {
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  background-color: rgba(221, 6, 6, 0.3);
+}
+.widget:first-child {
+  background-color: rgba(0, 57, 46, 0.3);
+}
+.widget {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #e9ecef;
+  font-size: 14px;
+}
+
+.location span:last-child {
+  font-size: 32px;
+  position: relative;
+}
+
+span.circle {
+  font-size: 20px !important;
+  position: absolute;
+  top: -16px;
+  right: 4px;
+  margin-top: 90px;
+}
+
+.weather,
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather img {
+  height: 24px;
+  width: 24px;
+}
+
+.apps img {
+  height: 60px;
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  position: relative;
+}
+
+.apps div:not(:last-child) {
+  height: 65px;
+  width: 65px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px;
+
+  position: relative;
+}
+
+.apps div span {
+  color: #272a2c;
+  position: absolute;
+  top: 85%;
+  font-size: 12px;
+}
+
+.apps div:last-child {
+  position: absolute;
+  top: 175%;
+  padding: 8px;
+  border-radius: 30px;
+  background-color: rgba(12, 7, 7, 0.3);
+}
+
+img:hover {
+  cursor: pointer;
+}
