@@ -15,7 +15,7 @@ body {
   width: 350px;
   height: 90vh;
 
-  background-image: url(./img/bg.jpeg);
+  background-image: url(./img/bg-4.jpeg);
   background-size: cover;
   background-position: center;
 
@@ -27,6 +27,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.date {
+  font-weight: 600;
+  color: #272a2c;
 }
 
 .top .middle {
@@ -132,6 +137,13 @@ span.circle {
   height: 60px;
 }
 
+.parent {
+  height: 52vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .apps {
   display: flex;
   justify-content: center;
@@ -139,7 +151,7 @@ span.circle {
   gap: 4px;
 }
 
-.apps div:not(:last-child) {
+.apps div {
   height: 65px;
   width: 65px;
 
@@ -154,21 +166,21 @@ span.circle {
   color: #272a2c;
   margin-top: -5px;
   font-size: 10px;
+  font-weight: 700;
 }
 
-.apps div:last-child {
-  margin-top: 140px;
+.footer {
   padding: 8px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: rgba(12, 7, 7, 0.3);
+  margin-top: auto;
+}
+
+.footer img {
+  height: 60px;
+  width: 60px;
 }
 
 img:hover {
   cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-  .apps div:last-child {
-    margin-top: 190px;
-  }
 }
