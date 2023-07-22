@@ -138,8 +138,7 @@ span.circle {
 }
 
 .parent {
-  height: 54vh;
-  background-color: red;
+  height: 52vh;
   display: flex;
   flex-direction: column;
 }
@@ -174,7 +173,6 @@ span.circle {
   border-radius: 20px;
   background-color: rgba(12, 7, 7, 0.3);
   margin-top: auto;
-  margin-bottom: 12px;
 }
 
 .footer img {
