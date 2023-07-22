@@ -138,8 +138,8 @@ span.circle {
 }
 
 .parent {
-  height: 52vh;
-
+  height: 54vh;
+  background-color: red;
   display: flex;
   flex-direction: column;
 }
