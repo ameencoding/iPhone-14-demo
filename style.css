@@ -15,12 +15,14 @@ body {
   width: 350px;
   height: 90vh;
 
-  background-image: url(./img/bg-4.jpeg);
+  background-image: url(./img/bg.jpeg);
   background-size: cover;
   background-position: center;
 
   border-radius: 50px;
   border: 18px solid #272a2c;
+
+  position: relative;
 }
 
 .top {
@@ -30,8 +32,8 @@ body {
 }
 
 .date {
-  font-weight: 600;
-  color: #272a2c;
+  font-weight: 400;
+  color: #e9ecef;
 }
 
 .top .middle {
@@ -43,6 +45,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* always should be up */
+  z-index: 1000;
 }
 
 .camera {
@@ -138,7 +143,7 @@ span.circle {
 }
 
 .parent {
-  height: 52vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
 }
@@ -163,9 +168,10 @@ span.circle {
 
 .apps div span {
   color: #272a2c;
+  letter-spacing: 1px;
   margin-top: -5px;
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .footer {
@@ -182,4 +188,130 @@ span.circle {
 
 img:hover {
   cursor: pointer;
+}
+
+.wrapper {
+  height: 52vh;
+}
+
+.swap {
+  height: 10px;
+  width: 150px;
+  margin: 5px auto;
+  background-color: #121111;
+  border-radius: 10px;
+  bottom: 0px;
+  cursor: pointer;
+
+  animation: swap 3s infinite;
+  animation-iteration-count: 2;
+
+  position: sticky;
+
+  /* always should be up */
+  z-index: 1000;
+}
+
+@keyframes swap {
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.switch {
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  right: -25px;
+  background-color: #272a2c;
+  height: 50px;
+  width: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.facebook {
+  height: 86vh;
+  width: 315px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #4267b2;
+  border-radius: 30px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m_part {
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.form > * {
+  border-radius: 2px;
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin: 6px 0px;
+  font-size: 16px;
+}
+
+.form input {
+  border: 0.4px solid #383f44;
+  margin: 0px 0px;
+}
+
+.form input:first-child {
+  border-bottom: 0.8px #272a2c solid;
+}
+.form input[type="password"] {
+  border-top: 0.8px #272a2c solid;
+}
+
+.form button {
+  color: #e9ecef;
+  background-color: #4473d2;
+  cursor: pointer;
+}
+
+.b_part {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+.b_part div {
+  text-align: center;
+}
+
+.b_part div:first-child a {
+  text-decoration: none;
+  color: #e9ecef;
+}
+
+.b_part div:last-child {
+  cursor: pointer;
+  color: #e9ecef;
+  margin-top: 24px;
+}
+
+.facebook-logo {
+  margin-bottom: 18px;
+}
+
+.facebook-logo img {
+  width: 200px;
+}
+
+.hide {
+  visibility: hidden;
+  transition: all 1s ease-out;
 }
