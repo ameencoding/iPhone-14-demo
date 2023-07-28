@@ -143,7 +143,7 @@ span.circle {
 }
 
 .parent {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -175,10 +175,15 @@ span.circle {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 8px;
   border-radius: 20px;
   background-color: rgba(12, 7, 7, 0.3);
   margin-top: auto;
+  margin-bottom: 8px;
 }
 
 .footer img {
@@ -190,48 +195,18 @@ img:hover {
   cursor: pointer;
 }
 
-.wrapper {
-  height: 52vh;
-}
-
-.swap {
-  height: 10px;
-  width: 150px;
-  margin: 5px auto;
-  background-color: #121111;
-  border-radius: 10px;
-  bottom: 0px;
+.arrow-back {
+  position: absolute;
+  top: 25px;
+  left: 5px;
   cursor: pointer;
 
-  animation: swap 3s infinite;
-  animation-iteration-count: 2;
-
-  position: sticky;
-
-  /* always should be up */
+  visibility: hidden;
   z-index: 1000;
 }
 
-@keyframes swap {
-  50% {
-    transform: translateY(5px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.switch {
-  position: absolute;
-  color: #fff;
-  top: 80px;
-  right: -25px;
-  background-color: #272a2c;
-  height: 50px;
-  width: 25px;
-  border-radius: 10px;
-  cursor: pointer;
+.arrow-back img {
+  height: 24px;
 }
 
 .facebook {
@@ -314,4 +289,12 @@ img:hover {
 .hide {
   visibility: hidden;
   transition: all 1s ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin-bottom: 18px;
+    padding: 4px;
+    border-radius: 16px;
+  }
 }
