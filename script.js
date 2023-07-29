@@ -8,6 +8,9 @@ const label = (document.querySelector(".date").textContent = `${hour}:${min}`);
 const facebook = document.querySelector(".facebook");
 const fbIcon = document.querySelector(".fb");
 const arrow = document.querySelector(".arrow-back");
+const main = document.querySelector("main");
+const phone = document.querySelector(".phone");
+const switchBtn = document.querySelector(".switch");
 
 fbIcon.addEventListener("click", function () {
   facebook.classList.remove("hide");
@@ -19,4 +22,16 @@ arrow.addEventListener("click", function (e) {
   setTimeout(function () {
     arrow.style.visibility = "hidden";
   }, 1000);
+});
+
+switchBtn.addEventListener("click", function () {
+  if (main.classList.contains("off")) {
+    main.classList.remove("off");
+    main.style.display = "block";
+    phone.style.backgroundImage = "url(./img/bg.jpeg)";
+  } else {
+    main.classList.add("off");
+    main.style.display = "none";
+    phone.style.backgroundImage = "none";
+  }
 });
