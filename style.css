@@ -159,7 +159,7 @@ span.circle {
 .parent {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: 52vh;
 }
 
 .apps {
